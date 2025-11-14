@@ -1,0 +1,24 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: #0b1522;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.app-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* zone principale */
+.main-content {
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+  background: linear-gradient(to right top, #010b13, #091722, #092031, #072a41, #043452);
+  padding: 2rem 3rem;
+  box-sizing: border-box;
+}

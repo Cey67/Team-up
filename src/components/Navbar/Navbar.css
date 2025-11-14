@@ -1,0 +1,128 @@
+.navbar {
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 100vh;
+  background: rgba(10, 20, 30, 0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.logo-img {
+  height: 45px;
+  width: auto;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: #d0d0d0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover {
+  color: #87cefa;
+  transform: translateX(5px);
+}
+
+/* AUTH BUTTONS */
+.auth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.login-btn,
+.register-btn {
+  border: 1px solid #87cefa;
+  background: transparent;
+  color: #87cefa;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.login-btn:hover {
+  background: #87cefa;
+  color: #0b1522;
+}
+
+.register-btn {
+  background: #87cefa;
+  color: #0b1522;
+}
+
+.register-btn:hover {
+  background: #6db6e4;
+}
+
+/* BURGER MENU (pour mobile) */
+.burger {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    width: 70px;
+    padding: 1rem 0.5rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .navbar.open .nav-links {
+    display: flex;
+    position: absolute;
+    left: 70px;
+    top: 0;
+    height: 100vh;
+    background: rgba(10, 20, 30, 0.95);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+  }
+}
